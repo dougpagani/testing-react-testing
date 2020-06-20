@@ -1,0 +1,14 @@
+# Starter source:
+https://youtu.be/v0t42xBIYIs
+# Add simple two tests:
+- Click button, wait a bit, see customer data, test for it. 
+- adapt above for: 
+    - react state-only test: click button, see that toggleColor works. (Test dom changes)
+
+Try all three paradigms.
+- enzyme
+- puppeteer
+- @testing-library/react
+
+# Intermediate test:
+- Maybe add loading icon for additional complexity. Break tests then fix. 
