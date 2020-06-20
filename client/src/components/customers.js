@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './customers.css';
+// import './getCustomers.js'
 
 class Customers extends Component {
   constructor() {
@@ -10,6 +11,8 @@ class Customers extends Component {
   }
 
   componentDidMount() {
+    // await x = getCustomers()
+    // this.setState({customers: x})
     fetch('/api/customers')
       .then(res => res.json())
       .then(customers => this.setState({customers}, () => console.log('Customers fetched...', customers)));
@@ -18,7 +21,7 @@ class Customers extends Component {
   render() {
     return (
       <div>
-        <h2>Customers</h2>
+        <h2>Customers, yooo</h2>
         <ul>
         {this.state.customers.map(customer => 
           <li key={customer.id}>{customer.firstName} {customer.lastName}</li>

@@ -8,7 +8,9 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "debug": "NODE_ENV=debug jest",
+    "debug-specific": "echo NYI; exit -1; NODE_ENV=debug jest --grep"
   },
   "author": "Brad Traversy",
   "license": "MIT",

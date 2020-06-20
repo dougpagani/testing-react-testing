@@ -12,3 +12,30 @@ Try all three paradigms.
 
 # Intermediate test:
 - Maybe add loading icon for additional complexity. Break tests then fix. 
+
+puppeteer:
+    - page.$
+    - page.tap
+    - page.$eval (document.querySelector, but limited to a frame/sub-node of the DOM) -- second arg, is transform (acts like map)
+    - page.$$ (document.querySelector -- on whole page)
+    - page.on
+    - page.click
+    - page.type
+    - list item stuff, check that the list renders
+    - build a button
+        - page.click('#buttonForCustomer') ... assert.equal(page.$eval('customers')[0], 'Rick Perry')
+    - build a loading indicator
+    - page.await()
+    - page.waitForSelector()
+    - organize git hooks like I was talking about, for nicer dev workflow
+    - Faker -- generate some summy data
+    - set cookies from tests
+    - page.setCookie
+    - page.screenshot()
+    - request interception -- testing failure modes
+        - page.setRquestInterception(true)
+        - page.on('request', ... req.abort/continue -- matching on api-pathfrag)
+        - page.click
+        - page.$eval(... get the element that should ahve the error message)
+        - assert.equal(msgfromeval, 'couldnt load customers')
+    - page.emulate
